@@ -7,7 +7,7 @@ APP.prototype.init = function() {
     this.scene = new THREE.Scene();
 
     //初始化相机
-    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 10000);
     this.camera.position.set(0, 0, 0);
     this.scene.add(this.camera);
 
@@ -42,7 +42,9 @@ APP.prototype.initCube = function() {
     var skyBoxSize = 5;
 
     var _geometry = new THREE.BoxGeometry(skyBoxSize, skyBoxSize, skyBoxSize);
-    var _material = new THREE.MeshNormalMaterial();
+    var _material = new THREE.MeshNormalMaterial({
+        side: THREE.BackSide
+    });
     // Align the skybox to the floor (which is at y=0).
     this.skybox = new THREE.Mesh(_geometry, _material);
     this.skybox.position.y = skyBoxSize/2;
