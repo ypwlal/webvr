@@ -1,0 +1,17 @@
+{
+  "name": "webvr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es6-promise": "^4.0.5",
+    "three": "^0.84.0",
+    "webvr-polyfill": "^0.9.25"
+  }
+}
